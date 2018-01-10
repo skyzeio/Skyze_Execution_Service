@@ -1,0 +1,8 @@
+__pycache__
+Data/*
+.DS_Store
+.externalToolBuilders
+.settings
+.pydevproject
+*.log
+~*.xlsx
