@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 # Skyze Imports
-from Skyze_Execution_Service import settings
+import settings_skyze
 from Skyze_Standard_Library.SkyzeServiceAbstract import *
 import Skyze_Standard_Library.Colourful_Printing as cp
 

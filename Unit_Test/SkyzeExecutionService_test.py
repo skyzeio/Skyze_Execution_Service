@@ -9,7 +9,7 @@ from Skyze_Standard_Library.Unit_Test.UnitTestSkyzeAbstract import *
 import Skyze_Standard_Library.Colourful_Printing as cp
 
 # Skyze libraries - Test Case Specific
-from Skyze_Execution_Service.SkyzeExecutionService import *
+from SkyzeExecutionService import *
 from Skyze_Messaging_Service.SkyzeMessageBusService import *
 from Skyze_Messaging_Service.Messages.MessageOrder \
     import MessageOrder
@@ -27,10 +27,10 @@ class SkyzeExecutionService_test(UnitTestSkyzeAbstract):
     # logger_class_name = self.__class__.__name__
     # logger = SkyzeLogger(logger_class_name, "")
     # log_message = f"{logger_class_name}::__init__::Started"
-    package_name = "Skyze Notifier Service"
+    print("HERE")
     test_name = "__sendTweet"
     test_file = target_file = test_columns = "N/A"
-    self.printTestHeader(package_name, test_name, test_file,
+    self.printTestHeader(self._package_name, test_name, test_file,
                          target_file, test_columns)
 
     message_bus = SkyzeMessageBusService()
