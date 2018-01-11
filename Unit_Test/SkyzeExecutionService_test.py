@@ -11,8 +11,8 @@ import Skyze_Standard_Library.Colourful_Printing as cp
 # Skyze libraries - Test Case Specific
 from SkyzeExecutionService import *
 from Skyze_Messaging_Service.SkyzeMessageBusService import *
-from Skyze_Messaging_Service.Messages.MessageOrder \
-    import MessageOrder
+from Skyze_Messaging_Service.Messages.MessageOrderMarket \
+    import MessageOrderMarket
 
 
 class SkyzeExecutionService_test(UnitTestSkyzeAbstract):

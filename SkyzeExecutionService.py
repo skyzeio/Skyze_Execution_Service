@@ -12,8 +12,8 @@ import Skyze_Standard_Library.Colourful_Printing as cp
 
 # Skyze Messages
 from Skyze_Messaging_Service.Messages.SkyzeMessageTypes import *
-from Skyze_Messaging_Service.Messages.MessageOrder \
-    import MessageOrder
+from Skyze_Messaging_Service.Messages.MessageOrderMarket \
+    import MessageOrderMarket
 
 
 class SkyzeNotifierService(SkyzeServiceAbstract):
