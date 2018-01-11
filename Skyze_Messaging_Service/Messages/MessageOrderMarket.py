@@ -8,12 +8,12 @@ from Skyze_Messaging_Service.Messages.MessageSkyzeAbstract import *
 
 
 class MessageOrderMarket(MessageSkyzeAbstract):
-  """Prompts scheduler to run"""
+  '''A Market Order to be executed on an exchange'''
 
   def __init__(self):
     """Constructor"""
-    super().__init__(SkyzeMessageType.SCHEDULER_RUN)
-    self.__message_content = "Scheduler Run"
+    super().__init__(SkyzeMessageType.ORDER_MARKET)
+    self.__message_content = "Order Market"
 
   def getMessageContent(self):
     """Getter"""
