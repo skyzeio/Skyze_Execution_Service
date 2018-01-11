@@ -1,0 +1,29 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+
+[requires]
+
+python_version = "3.6"
+
+
+[packages]
+
+pylint = "*"
+arctic = "*"
+rollbar = "*"
+pymongo = {extras = ["tls"]}
+halo = "*"
+ccxt = "*"
+"pathlib2" = "*"
+
+
+[dev-packages]
+
+"autopep8" = "*"
+nose = "*"
+coverage = "*"
+jupyter = "*"
+mypy = "*"
