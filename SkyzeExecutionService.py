@@ -1,5 +1,4 @@
-"""Created on 13/10/2017
-   @author: michaelnew"""
+'''Created on 10/01/2018 @author: michaelnew'''
 
 # Third Party Imports
 from datetime import datetime
@@ -16,7 +15,7 @@ from Skyze_Messaging_Service.Messages.MessageOrderMarket \
     import MessageOrderMarket
 
 
-class SkyzeNotifierService(SkyzeServiceAbstract):
+class SkyzeExecutionService(SkyzeServiceAbstract):
   """Skyze inter-service message logger"""
 
   def __init__(self, message_bus):

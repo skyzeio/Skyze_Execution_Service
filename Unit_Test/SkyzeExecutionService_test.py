@@ -16,7 +16,7 @@ from Skyze_Messaging_Service.Messages.MessageOrderMarket \
 
 
 class SkyzeExecutionService_test(UnitTestSkyzeAbstract):
-  """Test the SkyzeNotifierService Class"""
+  """Test the SkyzeExecutionService Class"""
 
   _package_name = "Skyze_Execution_Service"
   _class_tested = "SkyzeExecutionService"
@@ -34,7 +34,7 @@ class SkyzeExecutionService_test(UnitTestSkyzeAbstract):
                          target_file, test_columns)
 
     message_bus = SkyzeMessageBusService()
-    notifier_service = SkyzeNotifierService(message_bus)
+    execution_service = SkyzeExecutionService(message_bus)
 
     source_name = "Bitfinex"
     exchange_intervals = []
@@ -47,7 +47,7 @@ class SkyzeExecutionService_test(UnitTestSkyzeAbstract):
     end_run_msg = MessageMarketDataUpdaterRunComplete(
         source_name, exchange_intervals, len(error_list),
         error_list, market_pairs=None)
-    notifier_service.receiveMessage(end_run_msg)
+    execution_service.receiveMessage(end_run_msg)
 
 
 if __name__ == '__main__':
