@@ -14,11 +14,11 @@ from Skyze_Messaging_Service.Messages.SkyzeMessageTypes import *
 class MessageSkyzeAbstract(object):
   """Skyze inter-service messages"""
 
-  def __init__(self, message_type, messsage_content):
+  def __init__(self, message_type, message_content):
     """Constructor"""
     self.__created = str(datetime.now())
     self.__message_type = message_type
-    self.__message_content = messsage_content
+    self.__message_content = message_content
     self.__message_id = uuid.uuid4()
 
   def getCreated(self):

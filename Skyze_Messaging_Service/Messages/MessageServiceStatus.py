@@ -14,7 +14,7 @@ class MessageServiceStatus(MessageSkyzeAbstract):
     """Constructor"""
     self.__service_status = service_status
     message_content = service_status
-    super().__init__(SkyzeMessageType.SERVICE_STATUS, messsage_content)
+    super().__init__(SkyzeMessageType.SERVICE_STATUS, message_content)
     self.__service = service_name
 
   def getService(self):

@@ -13,7 +13,7 @@ class MessageOrderMarket(MessageOrder):
   def __init__(self):
     """Constructor"""
     message_content = "Order Market"
-    super().__init__(SkyzeMessageType.ORDER_MARKET, messsage_content)
+    super().__init__(SkyzeMessageType.ORDER_MARKET, message_content)
 
   def getJSON(self):
     """Return object as JSON"""

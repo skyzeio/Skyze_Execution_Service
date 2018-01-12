@@ -8,35 +8,32 @@ from Skyze_Messaging_Service.Messages.MessageSkyzeAbstract import *
 
 
 class MessageMarketDataUpdaterRun(MessageSkyzeAbstract):
-    """Data has been fully loaded and ready for use"""
+  """Data has been fully loaded and ready for use"""
 
-    def __init__(self, exchange, interval, market_pairs=None):
-        """Constructor"""
-        super().__init__(SkyzeMessageType.MARKET_DATA_UPDATER_RUN)
-        self.__exchange = exchange
-        self.__market_pairs = market_pairs
-        self.__interval = interval
-        self.__message_content = f"{exchange}:{market_pairs}:{interval}"
+  def __init__(self, exchange, interval, market_pairs=None):
+    """Constructor"""
+    message_content = f"{exchange}:{market_pairs}:{interval}"
+    super().__init__(SkyzeMessageType.MARKET_DATA_UPDATER_RUN,
+                     message_content)
+    self.__exchange = exchange
+    self.__market_pairs = market_pairs
+    self.__interval = interval
 
-    def getMarketPair(self):
-        """Getter"""
-        return self.__market_pairs
+  def getMarketPair(self):
+    """Getter"""
+    return self.__market_pairs
 
-    def getExchange(self):
-        """Getter"""
-        return self.__exchange
+  def getExchange(self):
+    """Getter"""
+    return self.__exchange
 
-    def getInterval(self):
-        """Getter"""
-        return self.__interval
+  def getInterval(self):
+    """Getter"""
+    return self.__interval
 
-    def getMessageContent(self):
-        """Getter"""
-        return self.__message_content
-
-    def getJSON(self):
-        """Return object as JSON"""
-        text = super().getJSON() + f', "exchange": "{self.__exchange}"'
-        text += f', "market pair": "{self.__market_pairs}"'
-        text += f', "interval": "{self.__interval}"}}'
-        return text
+  def getJSON(self):
+    """Return object as JSON"""
+    text = super().getJSON() + f', "exchange": "{self.__exchange}"'
+    text += f', "market pair": "{self.__market_pairs}"'
+    text += f', "interval": "{self.__interval}"}}'
+    return text

@@ -21,33 +21,45 @@ class SkyzeExecutionService_test(UnitTestSkyzeAbstract):
   _package_name = "Skyze_Execution_Service"
   _class_tested = "SkyzeExecutionService"
 
+  def setUp(self):
+    super().setUp()
+    self.__message_bus = SkyzeMessageBusService()
+    self.__execution_service = SkyzeExecutionService(self.__message_bus)
+
+  def tearDown(self):
+    super().tearDown()
+    pass
+
+  def receiveMessage(self, message_received):
+    # Route to appropriate service
+    message_type = message_received.getMessageType()
+    if message_type == SkyzeMessageType.FILL:
+      self.__order_market(message_received)
+
   #@unittest.skip("Working on new test")
   def test__XXXX(self):
-    # Set up for testing
-    # logger_class_name = self.__class__.__name__
-    # logger = SkyzeLogger(logger_class_name, "")
-    # log_message = f"{logger_class_name}::__init__::Started"
-    print("HERE")
     test_name = "__sendTweet"
     test_file = target_file = test_columns = "N/A"
     self.printTestHeader(self._package_name, test_name, test_file,
                          target_file, test_columns)
 
-    message_bus = SkyzeMessageBusService()
-    execution_service = SkyzeExecutionService(message_bus)
-
+    # Test Parameters
     source_name = "Bitfinex"
     exchange_intervals = []
     error_list = []
 
-    print("\n\tsource_name: " + source_name +
+    print("\tsource_name: " + source_name +
           "\texchange_intervals: " + str(exchange_intervals) +
-          "\terror_list: " + str(error_list))
+          "\terror_list: " + str(error_list) + "\n\n")
 
-    end_run_msg = MessageMarketDataUpdaterRunComplete(
-        source_name, exchange_intervals, len(error_list),
-        error_list, market_pairs=None)
-    execution_service.receiveMessage(end_run_msg)
+    # Execute Test
+    print("=== Test Execution: \n")
+    order_msg = MessageOrderMarket()
+    self.__execution_service.receiveMessage(order_msg)
+
+    # Test Results
+    # TODO Set up the infrastructure for receiving messages, in this case FILLS
+    #      and asserting to the target results
 
 
 if __name__ == '__main__':

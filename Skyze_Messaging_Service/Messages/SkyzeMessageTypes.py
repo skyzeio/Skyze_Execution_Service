@@ -17,6 +17,7 @@ SkyzeMessageType = Enum("MessageType",
                         ORDER_EXIT_STOP_LOSS \
                         ORDER_EXIT_TAKE_PROFIT \
                         ORDER_EXIT_TRAILING_STOP \
+                        ORDER_CANCEL \
                         NOTIFICATION \
                         SCHEDULER_RUN \
                         SCHEDULER_TEST SIGNAL \

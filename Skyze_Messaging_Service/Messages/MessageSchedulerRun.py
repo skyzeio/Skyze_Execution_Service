@@ -13,7 +13,7 @@ class MessageSchedulerRun(MessageSkyzeAbstract):
   def __init__(self):
     """Constructor"""
     message_content = "Scheduler Run"
-    super().__init__(SkyzeMessageType.SCHEDULER_RUN, messsage_content)
+    super().__init__(SkyzeMessageType.SCHEDULER_RUN, message_content)
 
   def getJSON(self):
     """Return object as JSON"""

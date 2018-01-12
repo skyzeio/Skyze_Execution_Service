@@ -12,7 +12,7 @@ class MessageOrderExitStopLoss(MessageOrder):
   def __init__(self):
     """Constructor"""
     message_content = "Order Exit Stop Loss"
-    super().__init__(SkyzeMessageType.ORDER_EXIT_STOP_LOSS, messsage_content)
+    super().__init__(SkyzeMessageType.ORDER_EXIT_STOP_LOSS, message_content)
 
   def getJSON(self):
     """Return object as JSON"""
