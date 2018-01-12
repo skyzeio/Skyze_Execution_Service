@@ -3,4 +3,5 @@ Handles the the process between receiving orders, executing them on exchanges an
 
 ## Subtrees
 This project includes the following subtrees:
- 1. skyze_standard_library
+ 1. Skyze_Standard_Library
+ 2. Skyze_Messaging_Service
