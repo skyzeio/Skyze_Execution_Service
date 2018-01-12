@@ -3,16 +3,15 @@
 # Third Party Imports
 
 # Skyze Imports
-from Skyze_Messaging_Service.Messages.MessageOrder import *
+from Skyze_Messaging_Service.Messages.MessageSkyzeAbstract import *
 
 
-class MessageOrderEntryStop(MessageOrder):
+class MessageOrder(MessageSkyzeAbstract):
   '''A Stop Entry Order to be executed on an exchange'''
 
-  def __init__(self):
+  def __init__(self, message_type, messsage_content):
     """Constructor"""
-    message_content = "Order Entry Stop"
-    super().__init__(SkyzeMessageType.ORDER_ENTRY_STOP, messsage_content)
+    super().__init__(message_type, messsage_content)
 
   def getJSON(self):
     """Return object as JSON"""
