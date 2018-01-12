@@ -11,6 +11,12 @@ SkyzeMessageType = Enum("MessageType",
                         MARKET_DATA_UPDATER_RUN \
                         MARKET_DATA_UPDATER_RUN_ALL \
                         MARKET_DATA_UPDATER_RUN_COMPLETE \
+                        ORDER_MARKET \
+                        ORDER_ENTRY_STOP \
+                        ORDER_ENTRY_LIMIT \
+                        ORDER_EXIT_STOP_LOSS \
+                        ORDER_EXIT_TAKE_PROFIT \
+                        ORDER_EXIT_TRAILING_STOP \
                         NOTIFICATION \
                         SCHEDULER_RUN \
                         SCHEDULER_TEST SIGNAL \
