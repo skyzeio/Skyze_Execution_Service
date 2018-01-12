@@ -13,7 +13,7 @@ class MessageScreenerRun(MessageSkyzeAbstract):
   def __init__(self, screener_name):
     """Constructor"""
     message_content = f"{screener_name}"
-    super().__init__(SkyzeMessageType.SCREENER_RUN, messsage_content)
+    super().__init__(SkyzeMessageType.SCREENER_RUN, message_content)
     self.__screener_name = screener_name
 
   def getScreenerName(self):

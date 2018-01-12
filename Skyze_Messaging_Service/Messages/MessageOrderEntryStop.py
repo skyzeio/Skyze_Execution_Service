@@ -12,7 +12,7 @@ class MessageOrderEntryStop(MessageOrder):
   def __init__(self):
     """Constructor"""
     message_content = "Order Entry Stop"
-    super().__init__(SkyzeMessageType.ORDER_ENTRY_STOP, messsage_content)
+    super().__init__(SkyzeMessageType.ORDER_ENTRY_STOP, message_content)
 
   def getJSON(self):
     """Return object as JSON"""

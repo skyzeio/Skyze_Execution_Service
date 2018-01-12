@@ -12,7 +12,7 @@ class MessageOrderEntryLimit(MessageOrder):
   def __init__(self):
     """Constructor"""
     message_content = "Order Entry Limit"
-    super().__init__(SkyzeMessageType.ORDER_ENTRY_LIMIT, messsage_content)
+    super().__init__(SkyzeMessageType.ORDER_ENTRY_LIMIT, message_content)
 
   def getJSON(self):
     """Return object as JSON"""
