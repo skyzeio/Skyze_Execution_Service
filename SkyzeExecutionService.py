@@ -5,7 +5,7 @@ from datetime import datetime
 
 
 # Skyze Imports
-import settings_skyze
+import Skyze_Standard_Library.settings_skyze as settings_skyze
 from Skyze_Standard_Library.SkyzeServiceAbstract import *
 import Skyze_Standard_Library.Colourful_Printing as cp
 
@@ -47,6 +47,7 @@ class SkyzeExecutionService(SkyzeServiceAbstract):
     message_type = message_received.getMessageType()
     if message_type == SkyzeMessageType.ORDER_MARKET:
       self.__order_market(message_received)
+
     elif message_type == SkyzeMessageType.ORDER_ENTRY_STOP:
       print("\n\nNOT YET IMPLIMENTED - SkyzeExecutionService::ReceiveMessage")
     elif message_type == SkyzeMessageType.ORDER_ENTRY_LIMIT:
